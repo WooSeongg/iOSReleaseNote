@@ -1,0 +1,28 @@
+# Overview
+
+The iOS & iPadOS 18.5 SDK provides support to develop apps for iPhone and iPad running iOS & iPadOS 18.5 beta 3. The SDK comes bundled with Xcode 16.4, available from the Mac App Store. For information on the compatibility requirements for Xcode 16.4, see Xcode 16.4 Release Notes.
+
+## Apple Vision Pro app
+### Resolved Issues
+- Fixed: On iOS 18.4 beta 1, the Apple Vision Pro app launches with a black screen if downloaded from the App Store. Upgrade to iOS 15.1 beta 1 and newer, and the app will launch as expected. (146814396)
+
+## hvf
+### Resolved Issues
+- Fixed: Availability checking is disabled for C APIs in hvf. (148385341)
+
+
+## Security
+### Resolved Issues
+- Fixed: Some enterprise apps might not launch. If you experienced this issue on iOS 18 or later, uninstall all enterprise apps from the device and reinstall them. (147965052)
+
+## Siri
+### Known Issues
+- Siri requests to play a song in Apple Music might fail across multiple platforms. (149392508)
+
+## StoreKit
+### Resolved Issues
+- Fixed: Calling isEligibleForIntroOffer(for:) will return false if there is no user account signed in. (146119524)
+
+## Writing Tools
+### Resolved Issues
+- Fixed: Resolved an issue where the attributes in the NSAttributedString passed in writingToolsCoordinator(_:replace:in:proposedText:reason:animationParameters:completion:) (or its companion async form) are stripped when an NSWritingToolsCoordinator or UIWritingToolsCoordinator has resultOptions set to [.plainText]. The attributes are no longer stripped but instead use the same attributes as were included by the delegate in the NSAttributedString returned in writingToolsCoordinator(_:requestsContextsFor:completion:) (or its companion async form). (144105888)
